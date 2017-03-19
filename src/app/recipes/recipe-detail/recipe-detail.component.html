@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-xs-12">
+    <img src="{{selectedRecipe?.recipeImagePath}}" alt="" class="img-responsive">
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{selectedRecipe?.recipeName}}</h1>
+  </div>
+  <div class="col-xs-12">
+    <button class="btn btn-success" (click)="addIngredients(selectedRecipe?.recipeIngredients)">To Shopping List</button>
+    <a class="btn btn-primary" (click) = "onEdit()">Edit</a>
+    <button class="btn btn-danger" (click) = "onDelete(selectedRecipe)">Delete</button>
+  </div>
+</div>
+<hr>
+<div class="row">
+  <div class="col-xs-12">
+    <p>{{selectedRecipe?.recipeDescription}}</p>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let ingredient of selectedRecipe?.recipeIngredients">{{ingredient.ingredientName}}, {{ingredient.ingredientAmount}}gm</li>
+    </ul>
+  </div>
+</div>
