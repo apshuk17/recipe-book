@@ -1,8 +1,8 @@
 import { Ingredients } from '../shared/ingredients';
 export class Recipe {
-    constructor(private recipeName: string, 
-                private recipeDescription: string,
-                private recipeImagePath: string,
-                private recipeIngredients: Ingredients[]
+    constructor(public recipeName: string, 
+                public recipeDescription: string,
+                public recipeImagePath: string,
+                public recipeIngredients: Ingredients[]
                 ) {}
 }
